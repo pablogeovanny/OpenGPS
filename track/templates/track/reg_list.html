@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+    <h1>Historial</h1>
+
+	{% if reg_list %}
+    {% for reg in reg_list %}
+<ul>
+<a href="{{ reg.get_absolute_url }}" style="color: black">{{ reg.Day }}</a>
+</ul>
+    {% endfor %}
+    {% else %}
+      <p>No se han encontrado dispositivos.</p>
+    {% endif %}
+{% endblock %}

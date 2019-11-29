@@ -1,0 +1,72 @@
+<!--
+-->
+
+{% extends "base_generic.html" %}
+{% block content %}
+{% load leaflet_tags %}
+{% leaflet_css %}
+{% leaflet_js %}
+<!DOCTYPE html>
+<style>
+    .leaflet-container {  /* all maps */
+        width:  100%;
+        height: 450px;}
+    #specialbigmap {
+        height: 800px;}
+    /* Resize the "display_raw" textbox */
+    .django-leaflet-raw-textarea {
+        width: 100%;}
+</style>
+<div width="100%" height="100%">
+{% leaflet_map "main" callback="map_init" %}
+</div>
+<div class = "container" hidden>
+    {% for ventasexpres_9656_2019_07_25 in object_list %}
+    <li1>{{ ventasexpres_9656_2019_07_25.Timestamp }}</li1>
+    <li2>{{ ventasexpres_9656_2019_07_25.Latitude }}</li2>
+    <li3>{{ ventasexpres_9656_2019_07_25.Longitude }}</li3>
+    <li4>{{ ventasexpres_9656_2019_07_25.Altitude }}</li4>
+    <li5>{{ ventasexpres_9656_2019_07_25.Distance }}</li5>
+    {% endfor %}
+</div>
+<script type="text/javascript">
+    function map_init(map, options) {
+    var time = document.querySelectorAll("li1"); //Get data from parraf
+    var lat = document.querySelectorAll("li2");
+    var lon = document.querySelectorAll("li3");
+    var alt = document.querySelectorAll("li4");
+    var dist = document.querySelectorAll("li5");
+    //var max = lat.length;                           //Var to max points
+    var lim = 2000;                                   //Var to set max number of points
+
+    var coor = [];                                    //Create array to save coor
+    for (i = 0; i < lim; i++) {
+        coor.push([lat[i].innerHTML, lon[i].innerHTML]);
+        var latlng = L.latLng([lat[i].innerHTML, lon[i].innerHTML]);
+        }
+
+    var myIcon = L.divIcon({html: ''});         //Set a simple icon for marker
+    var points = L.layerGroup([]);              //Create a checkBox to show/hide points
+    for (i = 0; i < lim; i++) {
+    var a = L.marker([lat[i].innerHTML, lon[i].innerHTML], {icon: myIcon}).bindPopup("Hora: " + time[i].innerHTML + "<br />" + "Latitud: " + lat[i].innerHTML + "<br />" + "Longitud: " + lon[i].innerHTML + "<br />" + "Altitud: " + alt[i].innerHTML + " m<br />" + "Distancia: " + dist[i].innerHTML + " m").openPopup();
+    points.addLayer(a);
+        }
+      var overlayMaps = {
+      "Mostrar/Ocultar puntos": points
+      };
+      var baseMaps = {};
+     L.control.layers(baseMaps, overlayMaps, {collapsed: false, position: 'topleft'}).addTo(map);
+
+    map.setView([0.345,-78.122], 13); //Map view
+    var polylineOptions = {             //Polilyne
+               color: 'blue',
+               weight: 4,
+               opacity: 0.6,
+               smoothFactor: 5
+             };
+    var polyline = new L.Polyline(coor, polylineOptions);
+    map.addLayer(polyline);
+    }
+</script>
+</html>
+{% endblock %}

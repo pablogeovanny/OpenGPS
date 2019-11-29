@@ -1,0 +1,52 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+    <h1>Lista de dispositivos</h1>
+
+    {% if device_list %}
+<div class = "container" hidden="">
+    {% for device in device_list %}
+    <li1>{{ device.Description }}</li1>
+    <li2>{{ device.IMEI }}</li2>
+    {% endfor %}
+</div>
+<div>
+    <ul>
+  <p><a id="1" href= "{% url 'taxi_list' %}" style="color: black"></a></p>
+  <p><a id="2" href= "{% url 'perro_list' %}" style="color: black"></a></p>
+  <p><a id="3" href= "{% url 'gato_list' %}" style="color: black"></a></p>
+  <p><a id="4" href= "{% url 'vendedor_list' %}" style="color: black"></a></p>
+  <p><a id="5" href= "{% url 'cobrador_list' %}" style="color: black"></a></p>
+  <p><a id="6" href= "{% url 'autodeventas_list' %}" style="color: black"></a></p>
+  <p><a id="7" href= "" style="color: black"></a></p>
+  <p><a id="8" href= "" style="color: black"></a></p>
+  <p><a id="9" href= "" style="color: black"></a></p>
+  <p><a id="10" href= "" style="color: black"></a></p>
+    </ul>
+</div>
+<p id="demo"></p>
+<script>
+    var desc = document.querySelectorAll("li1"); //Get data from parraf
+    var im = document.querySelectorAll("li2");     
+    if ( "{{user.get_username}}" == "Juan"){
+    document.getElementById("1").innerHTML = desc[0].innerHTML + " (IMEI: " + im[0].innerHTML + ")";
+    document.getElementById("2").innerHTML = desc[1].innerHTML + " (IMEI: " + im[1].innerHTML + ")";}
+    
+        if ( "{{user.get_username}}" == "Ana"){
+        document.getElementById("3").innerHTML = desc[2].innerHTML + " (IMEI: " + im[2].innerHTML + ")";}
+        
+            if ( "{{user.get_username}}" == "Ventasexpres"){
+            document.getElementById("4").innerHTML = desc[3].innerHTML + " (IMEI: " + im[3].innerHTML + ")";
+            document.getElementById("5").innerHTML = desc[4].innerHTML + " (IMEI: " + im[4].innerHTML + ")";}
+        
+                if ( "{{user.get_username}}" == "Superlimpio"){
+                document.getElementById("6").innerHTML = desc[5].innerHTML + " (IMEI: " + im[5].innerHTML + ")";}
+        
+                    if ( "{{user.get_username}}" == "Katy"){
+                    document.getElementById("demo").innerHTML = "No tienes dispositivos registrados";}
+</script>
+    {% else %}
+      <p>No se han encontrado dispositivos.</p>
+    {% endif %}
+{% endblock %}

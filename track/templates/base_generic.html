@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <head>
+  {% block title %}<title>OPEN GPS</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style>
+body {
+  background-color: #D1D0D5;
+}
+table{
+    background-color: #454447;
+    color: white;
+    height: 60px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align: center">OpenGPS</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+      {% block sidebar %}
+      <ul class="sidebar-nav">
+        <table style="width:100%">
+          <th style="text-align:center; width: 200px"><a href="{% url 'index' %}" style="color: white">Página de inicio</a></th>
+          <th><a href="{% url 'device_list' %}" style="color: white">Dispositivos</a></th>
+          <th style="text-align:right">
+          {% if user.is_authenticated %}
+          <li style="color: #D1D0D5">Usuario: {{ user.get_username }}</li>      
+<!--
+          <p id="demo">a</p>
+          <script type="text/javascript">
+            if ( "{{user.get_username}}" == "Katy")
+              {document.getElementById("demo").innerHTML = "VERDAD";}
+            else{}
+          </script>
+-->
+          <li><a href="{% url 'logout'%}?next={{request.path}}" style="color: white">Cerrar sesión</a></li>   
+          {% else %}
+          <li><a href="{% url 'login'%}?next={{request.path}}" style="color: white">Iniciar sesión</a></li>   
+          {% endif %}
+          </th>
+        </table> 
+      </ul>
+     {% endblock %}
+      </div>
+      <div class="col-sm-12">
+      {% block content %}{% endblock %}
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
