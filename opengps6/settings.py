@@ -25,7 +25,10 @@ SECRET_KEY = 'uf(_9=r9^gf1^23i-trz6nv1c-vn0smyclz7a%$vlvj)jhvadj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['68.66.235.160',
+                'www.opengpstracker.xyz',
+                'server.opengpstracker.xyz',
+                '68.66.235.160:8000']
 
 
 # Application definition
