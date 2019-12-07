@@ -24,13 +24,13 @@ class TaxiListView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = Reg
-  permission_required = "track.view_juan"
+  permission_required = "track.view_juan_8356_2019_07_03"
   queryset = Reg.objects.filter(Description="1")#Taxi
 class PerroListView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = Reg
-  permission_required = "track.view_juan"
+  permission_required = "track.view_juan_8356_2019_07_03"
   queryset = Reg.objects.filter(Description="2")#Perro
 class GatoListView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
@@ -42,19 +42,19 @@ class VendedorListView(LoginRequiredMixin, PermissionRequiredMixin, generic.List
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = Reg
-  permission_required = "track.view_ventasexpres"
+  permission_required = "track.view_ventasexpres_1847_2019_07_20"
   queryset = Reg.objects.filter(Description="4")#Vendedor
 class CobradorListView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = Reg
-  permission_required = "track.view_ventasexpres"
+  permission_required = "track.view_ventasexpres_1847_2019_07_20"
   queryset = Reg.objects.filter(Description="5")#Cobrador
 class AutodeventasListView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = Reg
-  permission_required = "track.view_superlimpio"
+  permission_required = "track.view_superlimpio_6468_2019_07_29"
   queryset = Reg.objects.filter(Description="6")#Autodeventas
 
 class juan_8356_2019_07_03DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
