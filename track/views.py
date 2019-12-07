@@ -36,7 +36,7 @@ class GatoListView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = Reg
-  permission_required = "track.view_ana"
+  permission_required = "track.view_ana_0684_2019_07_17"
   queryset = Reg.objects.filter(Description="3")#Gato
 class VendedorListView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''

@@ -28,8 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['68.66.235.160',
                 'www.opengpstracker.xyz',
                 'server.opengpstracker.xyz',
-                '68.66.235.160:8000']
-
+                '68.66.235.160:8000',
+                '127.0.0.1:8000',
+                '127.0.0.1'
+]
 
 # Application definition
 
