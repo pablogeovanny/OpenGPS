@@ -29,9 +29,17 @@
 <script>
     var desc = document.querySelectorAll("li1"); //Get data from parraf
     var im = document.querySelectorAll("li2");     
-    if ( "{{user.get_username}}" == "Juan"){
+    if ( "{{user.get_username}}" == "pablo"){
     document.getElementById("1").innerHTML = desc[0].innerHTML + " (IMEI: " + im[0].innerHTML + ")";
-    document.getElementById("2").innerHTML = desc[1].innerHTML + " (IMEI: " + im[1].innerHTML + ")";}
+    document.getElementById("2").innerHTML = desc[1].innerHTML + " (IMEI: " + im[1].innerHTML + ")";
+    document.getElementById("3").innerHTML = desc[2].innerHTML + " (IMEI: " + im[2].innerHTML + ")";
+    document.getElementById("4").innerHTML = desc[3].innerHTML + " (IMEI: " + im[3].innerHTML + ")";
+    document.getElementById("5").innerHTML = desc[4].innerHTML + " (IMEI: " + im[4].innerHTML + ")";
+    document.getElementById("6").innerHTML = desc[5].innerHTML + " (IMEI: " + im[5].innerHTML + ")";}
+
+      if ( "{{user.get_username}}" == "Juan"){
+      document.getElementById("1").innerHTML = desc[0].innerHTML + " (IMEI: " + im[0].innerHTML + ")";
+      document.getElementById("2").innerHTML = desc[1].innerHTML + " (IMEI: " + im[1].innerHTML + ")";}
     
         if ( "{{user.get_username}}" == "Ana"){
         document.getElementById("3").innerHTML = desc[2].innerHTML + " (IMEI: " + im[2].innerHTML + ")";}
