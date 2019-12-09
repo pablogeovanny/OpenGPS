@@ -61,84 +61,84 @@ class juan_8356_2019_07_03DetailView(LoginRequiredMixin, PermissionRequiredMixin
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = juan_8356_2019_07_03
-  permission_required = "track.view_juan"
+  permission_required = "track.view_juan_8356_2019_07_03"
 class juan_8356_2019_07_05DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = juan_8356_2019_07_05
-  permission_required = "track.view_juan"
+  permission_required = "track.view_juan_8356_2019_07_03"
 class juan_8356_2019_07_06DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = juan_8356_2019_07_06
-  permission_required = "track.view_juan"
+  permission_required = "track.view_juan_8356_2019_07_03"
 class juan_8356_2019_07_09DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = juan_8356_2019_07_09
-  permission_required = "track.view_juan"
+  permission_required = "track.view_juan_8356_2019_07_03"
 class juan_9012_2019_07_13DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = juan_9012_2019_07_13
-  permission_required = "track.view_juan"
+  permission_required = "track.view_juan_8356_2019_07_03"
 class juan_9012_2019_07_16DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = juan_9012_2019_07_16
-  permission_required = "track.view_juan"
+  permission_required = "track.view_juan_8356_2019_07_03"
 class ana_0684_2019_07_17DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = ana_0684_2019_07_17
-  permission_required = "track.view_ana"
+  permission_required = "track.view_ana_0684_2019_07_17"
 class ana_0684_2019_07_18DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = ana_0684_2019_07_18
-  permission_required = "track.view_ana"
+  permission_required = "track.view_ana_0684_2019_07_17"
 class ana_0684_2019_07_19DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = ana_0684_2019_07_19
-  permission_required = "track.view_ana"
+  permission_required = "track.view_ana_0684_2019_07_17"
 class ventasexpres_1847_2019_07_20DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = ventasexpres_1847_2019_07_20
-  permission_required = "track.view_ventasexpres"
+  permission_required = "track.view_ventasexpres_1847_2019_07_20"
 class ventasexpres_1847_2019_07_22DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = ventasexpres_1847_2019_07_22
-  permission_required = "track.view_ventasexpres"
+  permission_required = "track.view_ventasexpres_1847_2019_07_20"
 class ventasexpres_1847_2019_07_23DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = ventasexpres_1847_2019_07_23
-  permission_required = "track.view_ventasexpres"
+  permission_required = "track.view_ventasexpres_1847_2019_07_20"
 class ventasexpres_9656_2019_07_24DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = ventasexpres_9656_2019_07_24
-  permission_required = "track.view_ventasexpres"
+  permission_required = "track.view_ventasexpres_1847_2019_07_20"
 class ventasexpres_9656_2019_07_25DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = ventasexpres_9656_2019_07_25
-  permission_required = "track.view_ventasexpres"
+  permission_required = "track.view_ventasexpres_1847_2019_07_20"
 class superlimpio_6468_2019_07_29DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = superlimpio_6468_2019_07_29
-  permission_required = "track.view_superlimpio"
+  permission_required = "track.view_superlimpio_6468_2019_07_29"
 class superlimpio_6468_2019_07_30DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = superlimpio_6468_2019_07_30
-  permission_required = "track.view_superlimpio"
+  permission_required = "track.view_superlimpio_6468_2019_07_29"
 class superlimpio_6468_2019_07_31DetailView(LoginRequiredMixin, PermissionRequiredMixin, generic.ListView):
   login_url = ''
   redirect_field_name = 'redirect_to'
   model = superlimpio_6468_2019_07_31
-  permission_required = "track.view_superlimpio"
+  permission_required = "track.view_superlimpio_6468_2019_07_29"

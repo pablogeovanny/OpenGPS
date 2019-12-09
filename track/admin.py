@@ -8,7 +8,7 @@ from leaflet.admin import LeafletGeoAdmin
 class DeviceAdmin(LeafletGeoAdmin):
     list_display = ('IMEI', 'Description', 'User')
 class RegAdmin(LeafletGeoAdmin):
-    list_display = ('Day', 'Description', 'User')
+    list_display = ('id', 'Day', 'Description', 'User')
 class juan_8356_2019_07_03Admin(LeafletGeoAdmin):
     list_display = ('Timestamp', 'Latitude', 'Longitude', 'Altitude', 'Distance')
 class juan_8356_2019_07_05Admin(LeafletGeoAdmin):
