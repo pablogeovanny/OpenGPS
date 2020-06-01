@@ -1,6 +1,3 @@
-
-
-
 from django.db import models
 from django.contrib.gis.db import models as geomodels
 from django.contrib.auth.models import User
@@ -12,15 +9,8 @@ class Device(models.Model):
     User = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return self.Description
-    #def get_absolute_url(self):
-        """
-        Devuelve el URL a una instancia particular de Book
-        """
-        #return reverse('Device-detail', args=[str(self.id)])
     class Meta:
-        # order of drop-down list items
         ordering = ('id',)
-        # plural form in admin view
         verbose_name_plural = 'Devices'
         pass
 class Reg(models.Model):

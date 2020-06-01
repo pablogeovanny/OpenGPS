@@ -1,6 +1,4 @@
 from django.contrib import admin
-
-
 from .models import Device, Reg
 from .models import juan_8356_2019_07_03, juan_8356_2019_07_05, juan_8356_2019_07_06, juan_8356_2019_07_09, juan_9012_2019_07_13, juan_9012_2019_07_16, ana_0684_2019_07_17, ana_0684_2019_07_18, ana_0684_2019_07_19, ventasexpres_1847_2019_07_20, ventasexpres_1847_2019_07_22, ventasexpres_1847_2019_07_23, ventasexpres_9656_2019_07_24, ventasexpres_9656_2019_07_25, superlimpio_6468_2019_07_29, superlimpio_6468_2019_07_30, superlimpio_6468_2019_07_31
 from leaflet.admin import LeafletGeoAdmin

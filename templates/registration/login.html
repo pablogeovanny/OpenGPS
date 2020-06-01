@@ -1,6 +1,5 @@
 {% extends "base_generic.html" %}
 
-
 {% block content %}
 
 {% if form.errors %}
@@ -18,7 +17,7 @@
 
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
-
+<center>
 <div>
   <td>{{ form.username.label_tag }}</td>
   <td>{{ form.username }}</td>
@@ -32,5 +31,6 @@
   <input type="submit" value="Ingresar" />
   <input type="hidden" name="next" value="{{ next }}" />
 </div>
+</center>
 </form>
 {% endblock %}

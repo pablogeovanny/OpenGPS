@@ -142,3 +142,4 @@ class superlimpio_6468_2019_07_31DetailView(LoginRequiredMixin, PermissionRequir
   redirect_field_name = 'redirect_to'
   model = superlimpio_6468_2019_07_31
   permission_required = "track.view_superlimpio_6468_2019_07_29"
+  
