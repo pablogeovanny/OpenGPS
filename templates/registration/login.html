@@ -19,11 +19,13 @@
 {% csrf_token %}
 <center>
 <div>
-  <td>{{ form.username.label_tag }}</td>
+    <!-- <td>{{ form.username.label_tag }}</td> -->
+  <td>Nombre de usuario</td>  
   <td>{{ form.username }}</td>
 </div>
 <div>
-  <td>{{ form.password.label_tag }}</td>
+  <!-- <td>{{ form.password.label_tag }}</td> -->
+  <td>Contraseña</td>
   <td>{{ form.password }}</td>
 </div>
 
